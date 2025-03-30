@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indic Traveller</title>
+    <title>Bikalpa's Wanderlust</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <!-- Header with personal branding -->
     <header>
         <div class="container">
-            <div class="logo">Indic Traveller</div>
+            <div class="logo">Bikalpa's Wanderlust</div>
+            <p class="tagline">Journals • Travel • Musings</p>
             <nav class="main-nav">
-                <a href="/">DESTINATIONS</a>
-                <a href="/">TRAVEL BLOG</a>
-                <a href="/">TRAVEL ADVICE</a>
-                <a href="/">GEAR REVIEWS</a>
+                <a href="/">HOME</a>
+                <a href="/travel.html">TRAVEL</a>
+                <a href="/daily.html">DAILY LIFE</a>
+                <a href="/thoughts.html">THOUGHTS</a>
                 <a href="/about.html">ABOUT</a>
-                <a href="/" class="book-btn">BOOK</a>
             </nav>
             <button class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
@@ -25,92 +26,114 @@
         </div>
     </header>
 
+    <!-- Personal intro section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>WELCOME</h1>
-            <p>Indic Traveller is all about traveling adventurously around the world.<br>
-            No sponsored trips, just real travel tips.</p>
-            <a href="/about.html" class="cta-btn">MORE ABOUT INDIE TRAVELLER ></a>
+            <h1>Pages From My Journey</h1>
+            <p>A collection of wanderings, everyday moments, and quiet reflections</p>
         </div>
     </section>
 
     <main class="container">
-        <section class="featured-section">
-            <h2>FEATURED TRIP</h2>
-            <div class="featured-card">
-                <div class="featured-image">
-                    <img src="images/spain.jpg" alt="Andalucia, Spain">
-                    <div class="location-tag">ANDALUCIA, SPAIN</div>
-                </div>
-                <div class="featured-links">
-                    <a href="/" class="featured-link">
-                        <h3>BEFORE YOU TRAVEL</h3>
-                        <p>MY TRAVEL CHECKLIST</p>
-                    </a>
-                    <a href="/" class="featured-link">
-                        <h3>TRAVEL ESSENTIALS</h3>
-                        <p>TOP APPS & RESOURCES I USE</p>
-                    </a>
-                </div>
+        <!-- Featured Journal Entry -->
+        <section class="featured-journal">
+            <div class="journal-image">
+                <img src="images/featured-entry.jpg" alt="Featured Journal Entry">
+                <div class="entry-date">May 15, 2024</div>
+            </div>
+            <div class="journal-content">
+                <h2>Today's Highlight</h2>
+                <p class="excerpt">The golden light filtered through the cafe window as I wrote this morning. There's something magical about the first sip of coffee and a fresh page...</p>
+                <a href="posts/todays-entry.html" class="read-btn">Read Full Entry <i class="fas fa-arrow-right"></i></a>
             </div>
         </section>
 
-        <section class="destinations">
-            <h2>EXPLORE DESTINATIONS</h2>
-            <p class="section-description">Dig into our down-to-Earth budget travel guides from around the world, filled with itinerary ideas, travel tips, and recommendations for places to go.</p>
-            
-            <div class="destination-grid">
-                <div class="destination-card">
-                    <img src="images/southeast-asia.jpg" alt="Southeast Asia">
-                    <h3>SOUTHEAST ASIA</h3>
-                </div>
-                <div class="destination-card">
-                    <img src="images/central-america.jpg" alt="Central America">
-                    <h3>CENTRAL AMERICA</h3>
-                </div>
+        <!-- Journal Categories -->
+        <section class="categories">
+            <div class="category-card" style="background-image: url('images/travel-bg.jpg')">
+                <a href="/travel.html">
+                    <h3>Travel Chronicles</h3>
+                    <p>Adventures near and far</p>
+                </a>
+            </div>
+            <div class="category-card" style="background-image: url('images/daily-bg.jpg')">
+                <a href="/daily.html">
+                    <h3>Daily Pages</h3>
+                    <p>Ordinary moments, extraordinary memories</p>
+                </a>
+            </div>
+            <div class="category-card" style="background-image: url('images/thoughts-bg.jpg')">
+                <a href="/thoughts.html">
+                    <h3>Thought Vault</h3>
+                    <p>Ideas and reflections</p>
+                </a>
             </div>
         </section>
 
-        <section class="recent-posts">
-            <h2>LATEST TRAVEL STORIES</h2>
-            <div class="posts-grid">
-                <article class="post-card">
-                    <img src="images/post-1.jpg" alt="Post image">
-                    <div class="post-content">
-                        <h3>My First Blog Post</h3>
-                        <p>A short excerpt from my first post...</p>
-                        <div class="post-meta">
-                            <span class="date">May 1, 2024</span>
-                            <a href="posts/first-post.html" class="read-more">Read More</a>
-                        </div>
+        <!-- Recent Entries -->
+        <section class="recent-entries">
+            <h2>Recent Journal Entries</h2>
+            <div class="entries-grid">
+                <article class="entry-card">
+                    <img src="images/entry-1.jpg" alt="Journal Entry">
+                    <div class="entry-meta">
+                        <span class="category">TRAVEL</span>
+                        <span class="date">May 10, 2024</span>
                     </div>
+                    <h3>Sunrise at the Mountain</h3>
+                    <p>Woke up at 4am to hike Poon Hill. The cold was biting but the view...</p>
+                    <a href="posts/mountain-sunrise.html" class="read-more">Continue Reading</a>
                 </article>
-                <article class="post-card">
-                    <img src="images/post-2.jpg" alt="Post image">
-                    <div class="post-content">
-                        <h3>Another Post</h3>
-                        <p>Another interesting topic I wrote about...</p>
-                        <div class="post-meta">
-                            <span class="date">May 10, 2024</span>
-                            <a href="posts/second-post.html" class="read-more">Read More</a>
-                        </div>
+                
+                <article class="entry-card">
+                    <img src="images/entry-2.jpg" alt="Journal Entry">
+                    <div class="entry-meta">
+                        <span class="category">DAILY</span>
+                        <span class="date">May 8, 2024</span>
                     </div>
+                    <h3>Rainy Day Rituals</h3>
+                    <p>The pitter-patter against my window inspired a day of...</p>
+                    <a href="posts/rainy-day.html" class="read-more">Continue Reading</a>
+                </article>
+                
+                <article class="entry-card">
+                    <img src="images/entry-3.jpg" alt="Journal Entry">
+                    <div class="entry-meta">
+                        <span class="category">THOUGHTS</span>
+                        <span class="date">May 5, 2024</span>
+                    </div>
+                    <h3>On Slowing Down</h3>
+                    <p>Why do we measure life in productivity? Lately I've been...</p>
+                    <a href="posts/slowing-down.html" class="read-more">Continue Reading</a>
                 </article>
             </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <h2>Join My Journal</h2>
+            <p>Get occasional updates when I share new entries</p>
+            <form>
+                <input type="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
         </section>
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Indic Traveller</div>
+                <div class="footer-brand">
+                    <div class="logo">Bikalpa's Wanderlust</div>
+                    <p>A personal diary of travels, days, and thoughts</p>
+                </div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
-            <p class="copyright">© 2024 Indic Traveller. All rights reserved.</p>
+            <p class="copyright">© <span id="year"></span> Bikalpa's Wanderlust. All rights reserved.</p>
         </div>
     </footer>
 
