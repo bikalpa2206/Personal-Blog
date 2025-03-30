@@ -1,129 +1,282 @@
-/* ===== Base Styles ===== */
+/* ===== BASE STYLES ===== */
 :root {
-    --primary: #5F6F94;
-    --secondary: #F97B22;
-    --accent: #7FB77E;
-    --light: #FFF6BD;
-    --dark: #2C3333;
-    --text: #333333;
+  --primary: #5F6F94;
+  --secondary: #F97B22;
+  --accent: #7FB77E;
+  --light: #FFF6BD;
+  --dark: #2C3333;
+  --text: #333333;
+  --white: #FFFFFF;
+  --gray: #F5F5F5;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: var(--text);
-    background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* ===== Image Controls ===== */
-.responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
+  line-height: 1.2;
 }
 
-.hero-img {
-    max-height: 60vh;
-    object-fit: cover;
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+  margin-bottom: 1rem;
 }
 
-.content-img {
-    max-width: 800px;
-    margin: 20px auto;
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.thumbnail-img {
-    max-width: 400px;
+a:hover {
+  color: var(--secondary);
 }
 
-/* ===== Header/Nav ===== */
+/* ===== HEADER & NAVIGATION ===== */
 header {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    color: var(--primary);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--secondary);
+  margin-top: 5px;
 }
 
 .main-nav {
-    display: flex;
-    gap: 15px;
-    padding: 15px 0;
+  display: flex;
+  gap: 20px;
 }
 
 .main-nav a {
-    color: var(--dark);
-    text-decoration: none;
-    font-weight: 600;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: all 0.3s;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 
-.main-nav a:hover,
 .main-nav a.active {
-    background: var(--primary);
-    color: white;
+  background-color: var(--primary);
+  color: var(--white);
 }
 
-/* ===== Hero Sections ===== */
+/* ===== HERO SECTION ===== */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, var(--primary), var(--accent));
-    color: white;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('/images/hero-bg.jpg') center/cover;
+  color: var(--white);
+  text-align: center;
+  padding: 100px 20px;
+  margin-bottom: 40px;
 }
 
-/* ===== Content Areas ===== */
+.hero-content h1 {
+  color: var(--white);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin-bottom: 20px;
+}
+
+/* ===== IMAGE STYLES ===== */
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.hero-img {
+  max-height: 60vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.content-img {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.thumbnail-img {
+  max-width: 400px;
+}
+
+/* ===== CARD STYLES ===== */
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
 .entry-card {
-    background: white;
-    border-radius: 8px;
-    padding: 30px;
-    margin: 30px 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
-/* ===== Footer ===== */
+.entry-content {
+  flex: 1;
+}
+
+/* ===== BUTTONS & LINKS ===== */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.read-more {
+  color: var(--secondary);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
+.read-more::after {
+  content: '→';
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.read-more:hover::after {
+  transform: translateX(3px);
+}
+
+/* ===== FOOTER ===== */
 footer {
-    background: var(--dark);
-    color: white;
-    padding: 40px 0;
-    text-align: center;
+  background: var(--dark);
+  color: var(--white);
+  padding: 40px 0;
+  margin-top: auto;
 }
 
-/* ===== Responsive Design ===== */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--white);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-center { text-align: center; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 992px) {
+  .entry-card {
+    flex-direction: column;
+  }
+  
+  .content-img {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
-    .main-nav {
-        flex-direction: column;
-        gap: 5px;
-    }
-    
-    .hero {
-        padding: 40px 20px;
-    }
-    
-    .content-img {
-        max-width: 100%;
-    }
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .main-nav {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero {
+    padding: 60px 20px;
+  }
+  
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 40px 20px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
 }
