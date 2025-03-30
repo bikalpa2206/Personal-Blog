@@ -15,19 +15,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-
-      - name: Install dependencies
-        run: npm install  # Adjust if you're using a different package manager
-
-      - name: Build project
-        run: npm run build  # Adjust according to your build process
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./dist  # Adjust this to your actual build output folder
+          path: .  # Upload the entire repository
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v2
