@@ -1,8 +1,7 @@
+name: Deploy GitHub Pages Manually
+
 on:
-  workflow_dispatch:  # This allows you to manually trigger the workflow
-  push:
-    branches:
-      - main  # Runs on push, but you can remove this line to disable auto-run
+  workflow_dispatch:  # This enables manual triggering
 
 jobs:
   deploy:
