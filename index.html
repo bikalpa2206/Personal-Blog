@@ -6,27 +6,23 @@
     <title>Bikalpa's Wanderlust</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header with personal branding -->
     <header>
         <div class="container">
             <div class="logo">Bikalpa's Wanderlust</div>
-            <p class="tagline">Journals • Travel • Musings</p>
+            <p class="tagline">Journal • Travel • Musings</p>
             <nav class="main-nav">
-                <a href="/">HOME</a>
-                <a href="/travel.html">TRAVEL</a>
-                <a href="/daily.html">DAILY LIFE</a>
-                <a href="/thoughts.html">THOUGHTS</a>
-                <a href="/about.html">ABOUT</a>
+                <a href="index.html" class="active">HOME</a>
+                <a href="travel.html">TRAVEL</a>
+                <a href="daily.html">DAILY LIFE</a>
+                <a href="thoughts.html">THOUGHTS</a>
+                <a href="about.html">ABOUT</a>
             </nav>
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
-    <!-- Personal intro section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Pages From My Journey</h1>
@@ -35,102 +31,43 @@
     </section>
 
     <main class="container">
-        <!-- Featured Journal Entry -->
-        <section class="featured-journal">
-            <div class="journal-image">
-                <img src="images/featured-entry.jpg" alt="Featured Journal Entry">
-                <div class="entry-date">May 15, 2024</div>
+        <article class="featured-entry">
+            <div class="entry-date">May 15, 2024</div>
+            <h2>Today's Highlight</h2>
+            <div class="entry-content">
+                <img src="images/coffee-journal.jpg" alt="Coffee and journal on wooden table">
+                <p>The golden light filtered through the café window as I wrote this morning. There's something magical about the first sip of coffee and a fresh page...</p>
+                <a href="posts/todays-entry.html" class="read-more">Continue Reading →</a>
             </div>
-            <div class="journal-content">
-                <h2>Today's Highlight</h2>
-                <p class="excerpt">The golden light filtered through the cafe window as I wrote this morning. There's something magical about the first sip of coffee and a fresh page...</p>
-                <a href="posts/todays-entry.html" class="read-btn">Read Full Entry <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </section>
+        </article>
 
-        <!-- Journal Categories -->
-        <section class="categories">
-            <div class="category-card" style="background-image: url('images/travel-bg.jpg')">
-                <a href="/travel.html">
-                    <h3>Travel Chronicles</h3>
-                    <p>Adventures near and far</p>
-                </a>
-            </div>
-            <div class="category-card" style="background-image: url('images/daily-bg.jpg')">
-                <a href="/daily.html">
-                    <h3>Daily Pages</h3>
-                    <p>Ordinary moments, extraordinary memories</p>
-                </a>
-            </div>
-            <div class="category-card" style="background-image: url('images/thoughts-bg.jpg')">
-                <a href="/thoughts.html">
-                    <h3>Thought Vault</h3>
-                    <p>Ideas and reflections</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Recent Entries -->
-        <section class="recent-entries">
-            <h2>Recent Journal Entries</h2>
-            <div class="entries-grid">
-                <article class="entry-card">
-                    <img src="images/entry-1.jpg" alt="Journal Entry">
-                    <div class="entry-meta">
-                        <span class="category">TRAVEL</span>
-                        <span class="date">May 10, 2024</span>
-                    </div>
-                    <h3>Sunrise at the Mountain</h3>
-                    <p>Woke up at 4am to hike Poon Hill. The cold was biting but the view...</p>
-                    <a href="posts/mountain-sunrise.html" class="read-more">Continue Reading</a>
-                </article>
-                
-                <article class="entry-card">
-                    <img src="images/entry-2.jpg" alt="Journal Entry">
-                    <div class="entry-meta">
-                        <span class="category">DAILY</span>
-                        <span class="date">May 8, 2024</span>
-                    </div>
-                    <h3>Rainy Day Rituals</h3>
-                    <p>The pitter-patter against my window inspired a day of...</p>
-                    <a href="posts/rainy-day.html" class="read-more">Continue Reading</a>
-                </article>
-                
-                <article class="entry-card">
-                    <img src="images/entry-3.jpg" alt="Journal Entry">
-                    <div class="entry-meta">
-                        <span class="category">THOUGHTS</span>
-                        <span class="date">May 5, 2024</span>
-                    </div>
-                    <h3>On Slowing Down</h3>
-                    <p>Why do we measure life in productivity? Lately I've been...</p>
-                    <a href="posts/slowing-down.html" class="read-more">Continue Reading</a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Newsletter Signup -->
-        <section class="newsletter">
-            <h2>Join My Journal</h2>
-            <p>Get occasional updates when I share new entries</p>
-            <form>
-                <input type="email" placeholder="Your email address">
-                <button type="submit">Subscribe</button>
-            </form>
+        <section class="quick-links">
+            <a href="travel.html" class="link-card" style="background-color: #FF9E9E;">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Travel Chronicles</h3>
+            </a>
+            <a href="daily.html" class="link-card" style="background-color: #A0E7E5;">
+                <i class="fas fa-coffee"></i>
+                <h3>Daily Pages</h3>
+            </a>
+            <a href="thoughts.html" class="link-card" style="background-color: #B5EAEA;">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Thought Vault</h3>
+            </a>
         </section>
     </main>
 
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">Bikalpa's Wanderlust</div>
-                    <p>A personal diary of travels, days, and thoughts</p>
+                <div class="footer-about">
+                    <h3>Bikalpa's Wanderlust</h3>
+                    <p>Documenting life's journey one page at a time</p>
                 </div>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="mailto:youremail@example.com"><i class="fas fa-envelope"></i></a>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="mailto:contact@example.com">Contact</a>
                 </div>
             </div>
             <p class="copyright">© <span id="year"></span> Bikalpa's Wanderlust. All rights reserved.</p>
