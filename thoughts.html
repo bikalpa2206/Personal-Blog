@@ -1,57 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thoughts - Bikalpa's Wanderlust</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thoughts - Bikalpa's Wanderlust</title>
+  <base href="/">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">Bikalpa's Wanderlust</div>
-            <p class="tagline">Journal • Travel • Musings</p>
-            <nav class="main-nav">
-                <a href="index.html">HOME</a>
-                <a href="travel.html">TRAVEL</a>
-                <a href="daily.html">DAILY LIFE</a>
-                <a href="thoughts.html" class="active">THOUGHTS</a>
-                <a href="about.html">ABOUT</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container header-content">
+      <a href="/" class="logo">Bikalpa's Wanderlust</a>
+      <nav class="main-nav">
+        <a href="/">HOME</a>
+        <a href="/travel.html">TRAVEL</a>
+        <a href="/daily.html">DAILY LIFE</a>
+        <a href="/thoughts.html" class="active">THOUGHTS</a>
+        <a href="/about.html">ABOUT</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="container">
-        <h1 class="page-title">Thought Vault</h1>
-        <p class="page-subtitle">Ideas, reflections and occasional ramblings</p>
-        
-        <article class="thought-entry">
-            <div class="entry-meta">May 20, 2024 | 5 min read</div>
-            <h2>On Slowing Down</h2>
-            <img src="images/thoughts-slow.jpg" alt="Hammock in forest">
-            <div class="entry-excerpt">
-                <p>In a world that glorifies busyness, I've been learning the radical act of doing nothing. Not scrolling, not planning - just being...</p>
-                <a href="posts/slowing-down.html" class="read-more">Continue Reading →</a>
-            </div>
-        </article>
+  <main class="container">
+    <div class="page-header">
+      <h1 class="page-title">Thought Vault</h1>
+      <p class="page-subtitle">Ideas, reflections and occasional ramblings</p>
+    </div>
 
-        <article class="thought-entry">
-            <div class="entry-meta">May 10, 2024 | 6 min read</div>
-            <h2>Why We Travel</h2>
-            <img src="images/thoughts-travel.jpg" alt="Backpack on mountain">
-            <div class="entry-excerpt">
-                <p>It's not about the Instagram photos or the passport stamps. The real magic happens in the quiet moments between destinations...</p>
-                <a href="posts/why-travel.html" class="read-more">Continue Reading →</a>
-            </div>
-        </article>
-    </main>
+    <article class="entry-card">
+      <img src="/images/thoughts-slow.jpg" alt="Hammock in forest" class="responsive-img content-img">
+      <div class="entry-meta">May 20, 2024 | 5 min read</div>
+      <h2>On Slowing Down</h2>
+      <p>In a world that glorifies busyness, I've been learning the radical act of doing nothing...</p>
+      <a href="/posts/slowing-down.html" class="read-more">Continue Reading →</a>
+    </article>
 
-    <footer>
-        <!-- Same footer as about.html -->
-    </footer>
+    <article class="entry-card">
+      <img src="/images/thoughts-travel.jpg" alt="Backpack on mountain" class="responsive-img content-img">
+      <div class="entry-meta">May 10, 2024 | 6 min read</div>
+      <h2>Why We Travel</h2>
+      <p>It's not about the Instagram photos or the passport stamps. The real magic happens in the quiet moments...</p>
+      <a href="/posts/why-travel.html" class="read-more">Continue Reading →</a>
+    </article>
+  </main>
 
-    <script src="scripts/main.js"></script>
+  <footer>
+    <div class="container footer-content">
+      <p>© 2024 Bikalpa's Wanderlust. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
