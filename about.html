@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as index.html -->
-    <title>About - Bikalpa's Wanderlust</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Bikalpa's Wanderlust</title>
+  <base href="/">
+  <link rel="stylesheet" href="/styles/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <!-- Same header as index.html -->
-        <!-- Change active class to "About" -->
-    </header>
+  <header>
+    <div class="container header-content">
+      <a href="/" class="logo">Bikalpa's Wanderlust</a>
+      <nav class="main-nav">
+        <a href="/">HOME</a>
+        <a href="/travel.html">TRAVEL</a>
+        <a href="/daily.html">DAILY LIFE</a>
+        <a href="/thoughts.html">THOUGHTS</a>
+        <a href="/about.html" class="active">ABOUT</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="container">
-        <h1>About Me</h1>
-        <article class="entry-card">
-            <img src="/images/profile.jpg" alt="Profile" class="responsive-img thumbnail-img">
-            <p>Documenting my journey through life's adventures...</p>
-        </article>
-    </main>
+  <main class="container">
+    <div class="page-header">
+      <h1 class="page-title">About Me</h1>
+      <p class="page-subtitle">The person behind the words</p>
+    </div>
 
-    <footer>
-        <!-- Same footer as index.html -->
-    </footer>
+    <article class="entry-card" style="text-align: center;">
+      <img src="/images/profile.jpg" alt="Profile picture" class="responsive-img thumbnail-img">
+      <div class="entry-content">
+        <h2>Hello, I'm Bikalpa</h2>
+        <p>This journal began as a way to document my travels, but it quickly became a space for all of life's adventures - both big and small.</p>
+        <p>When I'm not writing here, you can find me hiking in the mountains, exploring local cafes, or getting lost in a good book.</p>
+        
+        <div style="margin-top: 30px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+          <h3>Quick Facts</h3>
+          <ul style="list-style-type: none;">
+            <li>📍 Based in Nepal</li>
+            <li>📖 Journaling since 2018</li>
+            <li>✈️ 12 countries visited</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2024 Bikalpa's Wanderlust. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
