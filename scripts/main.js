@@ -1,16 +1,30 @@
+// scripts/main.js
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
+    // 1. Update copyright year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // 2. Mobile menu toggle (if using mobile navigation)
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const mainNav = document.querySelector('.main-nav');
     
-    mobileMenuBtn.addEventListener('click', function() {
-        mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.style.display = mainNav.style.display === 'flex' ? 'none' : 'flex';
+        });
+    }
+    
+    // 3. Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
     
-    // Update copyright year automatically
-    document.getElementById('year').textContent = new Date().getFullYear();
-    
-    // Add animation to cards when scrolling
+    // 4. Add animation class when elements are visible
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.entry-card, .category-card');
         
@@ -25,16 +39,5 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll();
-    
-    // Simple form handling (would need backend for real functionality)
-    const newsletterForm = document.querySelector('.newsletter form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input').value;
-            alert(`Thanks for subscribing! We'll send journal updates to ${email}`);
-            this.querySelector('input').value = '';
-        });
-    }
+    animateOnScroll(); // Run once on page load
 });
