@@ -1,15 +1,13 @@
 /* ===== UPDATED COLOR SCHEME ===== */
 :root {
-  --primary: #4361ee; /* More vibrant blue */
-  --secondary: #f72585; /* Energetic pink */
-  --accent: #4cc9f0; /* Bright cyan */
-  --light: #f8f9fa; /* Soft off-white */
-  --dark: #212529; /* Darker for contrast */
-  --text: #2b2d42; /* Deeper text color */
+  --primary: #4361ee;
+  --secondary: #f72585;
+  --accent: #4cc9f0;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --text: #2b2d42;
   --white: #ffffff;
-  --gray: #e9ecef; /* Warmer light gray */
-  
-  /* New gradient variables */
+  --gray: #e9ecef;
   --bg-gradient: linear-gradient(135deg, #4361ee 0%, #4cc9f0 50%, #f72585 100%);
   --card-gradient: linear-gradient(to bottom right, rgba(255,255,255,0.9), rgba(255,255,255,0.7));
 }
@@ -74,6 +72,9 @@ header {
   border: 1px solid rgba(255,255,255,0.3);
   backdrop-filter: blur(5px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 900px; /* Added to constrain content width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .entry-card:hover {
@@ -89,16 +90,31 @@ header {
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
-/* ===== ENHANCED IMAGES ===== */
+/* ===== FIXED IMAGE STYLES ===== */
 .responsive-img {
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  margin: 15px auto;
+  width: auto; /* Prevents forced stretching */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Softer shadow */
+  border: 1px solid rgba(255,255,255,0.3);
   transition: transform 0.3s ease;
-  border: 2px solid rgba(255,255,255,0.3);
 }
 
-.responsive-img:hover {
-  transform: scale(1.02);
+.content-img {
+  max-width: 600px; /* Reduced from original */
+  margin: 20px auto;
+}
+
+.thumbnail-img {
+  max-width: 280px; /* Reduced from original */
+}
+
+.image-container {
+  text-align: center;
+  margin: 20px 0;
 }
 
 /* ===== GLOWING FOOTER ===== */
@@ -124,9 +140,18 @@ footer {
 @media (max-width: 768px) {
   .entry-card {
     padding: 20px;
+    margin: 20px 15px;
   }
   
   .page-header {
     padding: 15px;
+  }
+  
+  .content-img {
+    max-width: 90%;
+  }
+  
+  .thumbnail-img {
+    max-width: 200px;
   }
 }
