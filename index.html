@@ -3,44 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bikalpa's Wanderlust</title>
+    <title>Bikalpa's Wanderlust - Home</title>
+    <base href="/">
     <link rel="stylesheet" href="/styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Header -->
     <header>
         <div class="container">
-            <div class="logo">Bikalpa's Wanderlust</div>
+            <a href="/" class="home-link">
+                <div class="logo">Bikalpa's Wanderlust</div>
+            </a>
+            <p class="tagline">Journal • Travel • Musings</p>
             <nav class="main-nav">
-                <a href="/" class="active">Home</a>
-                <a href="/travel.html">Travel</a>
-                <a href="/daily.html">Daily</a>
-                <a href="/thoughts.html">Thoughts</a>
-                <a href="/about.html">About</a>
+                <a href="/" class="active">HOME</a>
+                <a href="/travel.html">TRAVEL</a>
+                <a href="/daily.html">DAILY LIFE</a>
+                <a href="/thoughts.html">THOUGHTS</a>
+                <a href="/about.html">ABOUT</a>
             </nav>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Pages From My Journey</h1>
-            <p>A collection of wanderings, everyday moments, and quiet reflections</p>
+        <div class="hero-content">
+            <h1>Welcome to My Digital Journal</h1>
+            <p>A collection of my travels, daily experiences, and personal reflections</p>
         </div>
     </section>
 
+    <!-- Featured Content -->
     <main class="container">
-        <article class="entry-card">
-            <img src="/images/coffee-journal.jpg" alt="Coffee and journal" class="responsive-img content-img">
-            <h2>Today's Highlight</h2>
-            <p>The golden light filtered through the café window as I wrote this morning...</p>
-            <a href="/posts/todays-entry.html">Read More</a>
-        </article>
+        <section class="featured-section">
+            <h2>Latest Entries</h2>
+            
+            <article class="entry-card">
+                <img src="/images/coffee-journal.jpg" alt="Coffee and journal" class="responsive-img content-img">
+                <div class="entry-content">
+                    <h3>Morning Rituals</h3>
+                    <p>How starting my day with coffee and writing sets the tone for everything...</p>
+                    <a href="/posts/morning-rituals.html" class="read-more">Read More →</a>
+                </div>
+            </article>
+            
+            <article class="entry-card">
+                <img src="/images/travel-pokhara.jpg" alt="Pokhara view" class="responsive-img content-img">
+                <div class="entry-content">
+                    <h3>Weekend in Pokhara</h3>
+                    <p>Discovering hidden gems in Nepal's adventure capital...</p>
+                    <a href="/posts/pokhara-trip.html" class="read-more">Read More →</a>
+                </div>
+            </article>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2023 Bikalpa's Wanderlust</p>
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Bikalpa's Wanderlust</h3>
+                    <p>Documenting life's journey one page at a time</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/about.html">About</a>
+                    <a href="mailto:contact@example.com">Contact</a>
+                </div>
+            </div>
+            <p class="copyright">© <span id="year"></span> Bikalpa's Wanderlust. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="/scripts/main.js"></script>
 </body>
 </html>
