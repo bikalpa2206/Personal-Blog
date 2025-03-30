@@ -1,7 +1,7 @@
 name: Deploy GitHub Pages Manually
 
 on:
-  workflow_dispatch:  # Allows manual execution from the Actions tab
+  workflow_dispatch:  # This enables manual triggering
 
 jobs:
   deploy:
