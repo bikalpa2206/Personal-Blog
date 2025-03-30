@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
     <title>Bikalpa's Wanderlust</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Updated Header -->
     <header>
         <div class="container">
-            <a href="/" class="home-link">
-                <div class="logo">Bikalpa's Wanderlust</div>
-            </a>
-            <p class="tagline">Journal • Travel • Musings</p>
+            <div class="logo">Bikalpa's Wanderlust</div>
             <nav class="main-nav">
-                <a href="/" class="active">HOME</a>
-                <a href="travel.html">TRAVEL</a>
-                <a href="daily.html">DAILY LIFE</a>
-                <a href="thoughts.html">THOUGHTS</a>
-                <a href="about.html">ABOUT</a>
+                <a href="/" class="active">Home</a>
+                <a href="/travel.html">Travel</a>
+                <a href="/daily.html">Daily</a>
+                <a href="/thoughts.html">Thoughts</a>
+                <a href="/about.html">About</a>
             </nav>
         </div>
     </header>
 
-    <!-- Rest of your existing index.html content -->
+    <section class="hero">
+        <div class="container">
+            <h1>Pages From My Journey</h1>
+            <p>A collection of wanderings, everyday moments, and quiet reflections</p>
+        </div>
+    </section>
+
     <main class="container">
-        <!-- ... -->
+        <article class="entry-card">
+            <img src="/images/coffee-journal.jpg" alt="Coffee and journal" class="responsive-img content-img">
+            <h2>Today's Highlight</h2>
+            <p>The golden light filtered through the café window as I wrote this morning...</p>
+            <a href="/posts/todays-entry.html">Read More</a>
+        </article>
     </main>
 
     <footer>
-        <!-- ... -->
+        <div class="container">
+            <p>&copy; 2023 Bikalpa's Wanderlust</p>
+        </div>
     </footer>
-    <script src="/scripts/main.js"></script>
 </body>
 </html>
