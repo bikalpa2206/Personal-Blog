@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
     <title>Bikalpa's Wanderlust</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Updated Header -->
     <header>
         <div class="container">
-            <div class="logo">Bikalpa's Wanderlust</div>
+            <a href="/" class="home-link">
+                <div class="logo">Bikalpa's Wanderlust</div>
+            </a>
             <p class="tagline">Journal • Travel • Musings</p>
             <nav class="main-nav">
-                <a href="index.html" class="active">HOME</a>
+                <a href="/" class="active">HOME</a>
                 <a href="travel.html">TRAVEL</a>
                 <a href="daily.html">DAILY LIFE</a>
                 <a href="thoughts.html">THOUGHTS</a>
@@ -23,57 +27,14 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Pages From My Journey</h1>
-            <p>A collection of wanderings, everyday moments, and quiet reflections</p>
-        </div>
-    </section>
-
+    <!-- Rest of your existing index.html content -->
     <main class="container">
-        <article class="featured-entry">
-            <div class="entry-date">May 15, 2024</div>
-            <h2>Today's Highlight</h2>
-            <div class="entry-content">
-                <img src="images/coffee-journal.jpg" alt="Coffee and journal on wooden table">
-                <p>The golden light filtered through the café window as I wrote this morning. There's something magical about the first sip of coffee and a fresh page...</p>
-                <a href="posts/todays-entry.html" class="read-more">Continue Reading →</a>
-            </div>
-        </article>
-
-        <section class="quick-links">
-            <a href="travel.html" class="link-card" style="background-color: #FF9E9E;">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>Travel Chronicles</h3>
-            </a>
-            <a href="daily.html" class="link-card" style="background-color: #A0E7E5;">
-                <i class="fas fa-coffee"></i>
-                <h3>Daily Pages</h3>
-            </a>
-            <a href="thoughts.html" class="link-card" style="background-color: #B5EAEA;">
-                <i class="fas fa-lightbulb"></i>
-                <h3>Thought Vault</h3>
-            </a>
-        </section>
+        <!-- ... -->
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>Bikalpa's Wanderlust</h3>
-                    <p>Documenting life's journey one page at a time</p>
-                </div>
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="mailto:contact@example.com">Contact</a>
-                </div>
-            </div>
-            <p class="copyright">© <span id="year"></span> Bikalpa's Wanderlust. All rights reserved.</p>
-        </div>
+        <!-- ... -->
     </footer>
-
-    <script src="scripts/main.js"></script>
+    <script src="/scripts/main.js"></script>
 </body>
 </html>
