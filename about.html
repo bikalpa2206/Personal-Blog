@@ -10,50 +10,48 @@
 	 <!-- ABOUT PAGE SPECIFIC CSS -->
   <style>
   /* ===== PROFILE CARD LAYOUT ===== */
-  .about-page .profile-card {
+ .about-page .profile-card {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     background: var(--white);
     border-radius: 12px;
-    padding: 40px;
-    margin-bottom: 50px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-    align-items: flex-start; /* Changed from center for better text alignment */
+    padding: 30px;
+    margin: 20px auto 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    align-items: flex-start;
   }
 
-  .about-page .profile-image-wrapper {
-    flex: 1;
-    min-width: 250px;
-    max-width: 350px;
+ .about-page .profile-image-wrapper {
+    width: 30%; /* Fixed width percentage */
+    min-width: 200px;
+    max-width: 250px; /* Strict maximum */
   }
 
-  .about-page .profile-img {
+ .about-page .profile-img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 300px; /* Reduced max height */
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     object-fit: cover;
   }
 
   .about-page .profile-content {
-    flex: 1.2;
+    width: 70%; /* Fixed width percentage */
   }
 
   /* ... rest of your existing about-page styles ... */
 
   /* Responsive adjustments */
-  @media (max-width: 768px) {
+ @media (max-width: 768px) {
     .about-page .profile-card {
       flex-direction: column;
-      gap: 30px;
-      padding: 30px;
+      padding: 20px;
     }
   
-    .about-page .profile-image-wrapper {
-      min-width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
+    .about-page .profile-image-wrapper,
+    .about-page .profile-content {
+      width: 100%;
+      max-width: 100%;
     }
   
     .about-page .quick-facts {
@@ -90,6 +88,7 @@
       <div class="profile-content">
         <h2>Hello, I'm Bikalpa</h2>
         <p>Welcome to my little corner of the internet, where travel tales, daily life shenanigans, and the occasional existential crisis collide! Picture me as a blend of Michael Scott and Chandler Bing, navigating the world with a mix of awkward charm and sarcastic wit. Whether I’m getting hilariously lost in a new city or debating if I’m more of a Ross or a Joey in my daily escapades, I promise to keep it real and relatable.</p>
+		<br>
         <p>Join me as I share my adventures, from the breathtaking to the downright bizarre, all while trying to figure out what it means to be an adult—spoiler alert: I still don’t have it all figured out! So grab your coffee, kick back, and let’s dive into this chaotic journey together. Just remember, if you’re looking for a perfectly curated travel blog, you might want to check out someone else—I'm here for the laughs and the realness!</p>
         
         <div class="quick-facts">
