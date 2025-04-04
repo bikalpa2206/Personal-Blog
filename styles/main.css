@@ -89,6 +89,10 @@ header {
 }
 
 /* ===== IMAGE CONTROLS ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
 .responsive-img {
   max-width: 100%;
   height: auto;
@@ -219,44 +223,43 @@ footer {
   gap: 30px;
   background: var(--white);
   border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 50px;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  padding: 25px;
+  margin: 20px auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   align-items: flex-start;
+  max-width: 900px; /* Added limit */
 }
 
 .about-page .profile-image-wrapper {
-  width: 35%;
-  min-width: 250px;
-  max-width: 300px;
+  width: 30%;
+  min-width: 200px;
+  max-width: 250px; /* Reduced from 300px */
 }
 
 .about-page .profile-img {
   width: 100%;
   height: auto;
-  max-height: 350px;
+  max-height: 280px; /* Reduced from 350px */
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   object-fit: cover;
 }
-.about-page .profile-content {
-  flex: 1;
-}
 
-.about-page .profile-content h2 {
-  color: var(--primary);
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+@media (max-width: 768px) {
+  .about-page .profile-card {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .about-page .profile-image-wrapper {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 20px;
+  }
+  
+  .about-page .profile-img {
+    max-height: 240px;
+  }
 }
-
-.about-page .quick-facts {
-  margin-top: 30px;
-  background: var(--gray);
-  padding: 20px 25px;
-  border-radius: 8px;
-  border-left: 4px solid var(--secondary);
-}
-/* ▲▲▲ END ABOUT PAGE STYLES ▲▲▲ */
 /* Add before any @media queries */
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
