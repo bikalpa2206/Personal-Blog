@@ -3,10 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untamed Path - Home</title>
+    <title>About - Untamed Path</title>
     <base href="/">
     <link rel="stylesheet" href="/styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<!-- ABOUT PAGE SPECIFIC CSS -->
+  <style>
+    /* ===== PROFILE CARD LAYOUT ===== */
+    .about-page .profile-card {
+      display: flex;
+      gap: 40px;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 50px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      align-items: center;
+    }
+
+    .about-page .profile-image-wrapper {
+      flex: 1;
+      min-width: 300px;
+    }
+	.about-page .profile-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .about-page .profile-content {
+      flex: 1.2;
+    }
+
+    .about-page .profile-content h2 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .about-page .profile-content p {
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+	 .about-page .quick-facts {
+      margin-top: 30px;
+      background: var(--gray);
+      padding: 20px 25px;
+      border-radius: 8px;
+      border-left: 4px solid var(--secondary);
+    }
+
+    .about-page .quick-facts h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .about-page .quick-facts ul {
+      list-style: none;
+    }
+
+    .about-page .quick-facts li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .about-page .profile-card {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+      }
+	   .about-page .profile-image-wrapper {
+        min-width: 100%;
+      }
+    
+      .about-page .quick-facts {
+        margin-top: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -28,16 +108,19 @@
       <p class="page-subtitle">Nothing much to say—just a wanderer munching on life’s flavors and pondering the universe!</p>
     </div>
 
-    <article class="entry-card" style="text-align: center;">
-      <img src="/images/mee.jpg" alt="Profile picture" class="responsive-img thumbnail-img">
-      <div class="entry-content">
+   <article class="profile-card">
+      <div class="profile-image-wrapper">
+        <img src="/images/mee.jpg" alt="Profile picture" class="profile-img">
+      </div>
+      
+      <div class="profile-content">
         <h2>Hello, I'm Bikalpa</h2>
         <p>Welcome to my little corner of the internet, where travel tales, daily life shenanigans, and the occasional existential crisis collide! Picture me as a blend of Michael Scott and Chandler Bing, navigating the world with a mix of awkward charm and sarcastic wit. Whether I’m getting hilariously lost in a new city or debating if I’m more of a Ross or a Joey in my daily escapades, I promise to keep it real and relatable.</p>
         <p>Join me as I share my adventures, from the breathtaking to the downright bizarre, all while trying to figure out what it means to be an adult—spoiler alert: I still don’t have it all figured out! So grab your coffee, kick back, and let’s dive into this chaotic journey together. Just remember, if you’re looking for a perfectly curated travel blog, you might want to check out someone else—I'm here for the laughs and the realness!</p>
         
-        <div style="margin-top: 30px; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <div class="quick-facts">
           <h3>Quick Facts</h3>
-          <ul style="list-style-type: none;">
+          <ul>
             <li>📍 Based in Australia</li>
             <li>📖 Journaling since 2020</li>
             <li>✈️ 2 countries visited</li>
