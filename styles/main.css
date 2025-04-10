@@ -57,7 +57,7 @@ header {
   color: var(--primary);
 }
 .logo img {
-    max-width: 320px; /* Adjust based on your design */
+    max-width: 350px; /* Adjust based on your design */
     height: auto;
     display: block;
 	margin: 0 auto; /* Ensures centering */
