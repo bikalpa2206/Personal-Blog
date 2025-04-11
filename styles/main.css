@@ -157,6 +157,27 @@ footer {
   margin: 0 auto;
 }
 /* ===== ADD THESE NEW STYLES ===== */
+.entry-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping to the next line if necessary */
+  justify-content: space-between; /* Space between items */
+  gap: 20px; /* Space between cards */
+}
+
+.entry-card {
+  flex: 1 1 calc(33.333% - 20px); /* Adjust the width of each card */
+  box-sizing: border-box; /* Ensure padding and margin are included in width */
+  max-width: calc(33.333% - 20px); /* Ensure cards do not exceed this width */
+}
+
+.content-img {
+  max-width: 100%; /* Ensure images are responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* ===== END OF STYLES ===== */
+
+/* ===== ADD THESE NEW STYLES ===== */
 /* Post Template Styles */
 .full-entry {
   max-width: 800px;
