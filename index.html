@@ -7,13 +7,65 @@
     <base href="/">
     <link rel="stylesheet" href="/styles/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
- <style>
-        /* New styles for the homepage */
+  <style>
+        /* Base Styles */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --text: #333;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .site-logo {
+            height: 50px;
+        }
+        
+        .main-nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .main-nav a:hover {
+            color: var(--secondary);
+        }
+        
+        /* Hero Section */
         .hero-section {
-            background-image: url('/images/hero.jpg'); /* Corrected path */
+             background-image: url('/images/hero.jpg'); /* Corrected path */
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 480px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -21,51 +73,184 @@
             text-align: center;
             position: relative;
         }
-
+        
         .hero-section h1 {
             font-size: 3rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Playfair Display', serif;
         }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
+        
+        /* Gallery Section */
         .section-title {
             text-align: center;
             margin: 40px 0 20px;
             font-size: 2rem;
             color: var(--primary);
+            font-family: 'Playfair Display', serif;
         }
-
+        
         .description {
             text-align: center;
             margin-bottom: 40px;
             font-size: 1.1rem;
             color: var(--text);
+        }
+        
+         .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+       .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            transform: translateY(0);
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+       .gallery-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+         .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.5));
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+		
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            filter: brightness(95%);
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+            filter: brightness(100%);
+        }
+        
+        .gallery-caption {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            transform: translateY(10px);
+            transition: transform 0.4s ease, background 0.4s ease;
+        }
+         .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+            background: rgba(255, 255, 255, 1);
+        }
+         .gallery-quote {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.4;
+            opacity: 0.9;
+            transition: opacity 0.4s ease;
+        }
+		 .gallery-item:hover .gallery-quote {
+            opacity: 1;
+        }
+           @keyframes float {
+            0% { transform: translateY(-5px) scale(1.02); }
+            50% { transform: translateY(-8px) scale(1.02); }
+            100% { transform: translateY(-5px) scale(1.02); }
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            margin: 50px auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            max-height: 70vh;
+            object-fit: contain;
+            animation: zoom 0.3s;
+        }
+        
+        .modal-caption {
+            margin: 20px auto;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: white;
+        }
+        
+        .modal-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .modal-quote {
+            font-family: 'Poppins', sans-serif;
+            font-style: normal;
+            font-size: 1.5rem;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #bbb;
+        }
+        
+        @keyframes zoom {
+            from {transform: scale(0.5); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -96,45 +281,95 @@
         <p class="description">Discover the beauty of travel, daily life, and the wonders of imagination through captivating images.</p>
         
         <div class="gallery">
-            <div class="gallery-item">
+            <div class="gallery-item" 
+                 data-title="Mountain Adventure" 
+                 data-quote="The mountains are calling and I must go - John Muir">
                 <img src="/images/mountains.jpg" alt="Mountains">
+                <div class="gallery-caption">
+                    <strong>Mountain Adventure</strong>
+                    <p class="gallery-quote">"The mountains are calling and I must go." - John Muir</p>
+                </div>
             </div>
-            <div class="gallery-item">
+            
+            <div class="gallery-item" 
+                 data-title="Local Café" 
+                 data-quote="Fill your paper with the breathings of your heart. - William Wordsworth">
                 <img src="/images/cafe.jpg" alt="Local Café">
+                <div class="gallery-caption">
+                    <strong>Local Café</strong>
+                    <p class="gallery-quote">"Fill your paper with the breathings of your heart." - William Wordsworth</p>
+                </div>
             </div>
-            <div class="gallery-item">
+            
+            <div class="gallery-item" 
+                 data-title="Starry Night" 
+                 data-quote="Look at the stars. See their beauty. And in that beauty, see yourself - D. Jackson">
                 <img src="/images/starry-sky.jpg" alt="Starry Night Sky">
+                <div class="gallery-caption">
+                    <strong>Starry Night</strong>
+                    <p class="gallery-quote">"Look at the stars. See their beauty. And in that beauty, see yourself." - D. Jackson</p>
+                </div>
             </div>
-            <div class="gallery-item">
+            
+            <div class="gallery-item" 
+                 data-title="Australian Journey" 
+                 data-quote="Not all those who wander are lost - J.R.R. Tolkien">
                 <img src="/images/travel-australia.jpg" alt="Travel in Australia">
+                <div class="gallery-caption">
+                    <strong>Australian Journey</strong>
+                    <p class="gallery-quote">"Not all those who wander are lost." - J.R.R. Tolkien</p>
+                </div>
             </div>
-            <div class="gallery-item">
+            
+            <div class="gallery-item" 
+                 data-title="Personal Journal" 
+                 data-quote="Life happens, coffee helps. - Anonymous">
                 <img src="/images/journal.jpg" alt="Journal Entry">
+                <div class="gallery-caption">
+                    <strong>Personal Journal</strong>
+                    <p class="gallery-quote">"Life happens, coffee helps." - Anonymous</p>
+                </div>
             </div>
-            <div class="gallery-item">
+            
+            <div class="gallery-item" 
+                 data-title="Fantasy World" 
+                 data-quote="Imagination is the only weapon in the war against reality - Lewis Carroll">
                 <img src="/images/fantasy.jpg" alt="Fantasy Imagination">
+                <div class="gallery-caption">
+                    <strong>Fantasy World</strong>
+                    <p class="gallery-quote">"Imagination is the only weapon in the war against reality." - Lewis Carroll</p>
+                </div>
             </div>
         </div>
     </main>
-
+ 
+ <!-- Lightbox Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption">
+            <div class="modal-title" id="modalTitle"></div>
+            <div class="modal-quote" id="modalQuote"></div>
+        </div>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <h3>Bikalpa's Wanderlust</h3>
-                    <p>Documenting life's journey one page at a time</p>
+                    <h3>Untamed Path</h3>
+                    <p>Documenting life's journey one step at a time</p>
                 </div>
                 <div class="footer-links">
                     <a href="/">Home</a>
                     <a href="/about.html">About</a>
-                    <a href="mailto:contact@example.com">Contact</a>
+                    <a href="mailto:bikalpacresta@outlook.com">Contact</a>
                 </div>
             </div>
-            <p class="copyright">© <span id="year"></span> Bikalpa's Wanderlust. All rights reserved.</p>
+            <p class="copyright">© <span id="year"></span> Bikalpa's Untamed path. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="/scripts/main.js"></script>
+    <script src="/scripts/index.js"></script>
 </body>
 </html>
